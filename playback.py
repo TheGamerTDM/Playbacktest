@@ -7,7 +7,7 @@ player = tkr.Tk()
 player.title('Audio Player')
 player.geometry('205x400')
 
-os.chdir('where your folder is :D')
+os.chdir('./music')
 songlist = os.listdir()
 
 playlist = tkr.Listbox(player, highlightcolor='blue', selectmode=tkr.SINGLE)
@@ -31,11 +31,11 @@ def ExitPlayer():
     pygame.mixer.music.stop()
 
 
-button1 = tkr.Button(player, width=5, hight=3, text='PLAY', command=Play)
-button2 = tkr.Button(player, width=5, hight=3, text='STOP', command=ExitPlayer)
+button1 = tkr.Button(player, width=5, height=3, text='PLAY', command=Play)
+button2 = tkr.Button(player, width=5, height=3, text='STOP', command=ExitPlayer)
 
 var = tkr.StringVar()
-songlist = tkr.Label(player, textvariable=var)
+songtitle = tkr.Label(player, textvariable=var)
 
 songtitle.pack()
 button1.pack(fill='x')
